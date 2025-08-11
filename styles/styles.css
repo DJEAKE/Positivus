@@ -266,6 +266,7 @@ svg * {
 body {
   font-size: clamp(16px, 1.25vw, 18px);
   font-family: var(--font-family-base);
+  font-weight: 400;
   font-size: 18px;
   line-height: 1.28;
   color: var(--color-dark);
@@ -335,6 +336,16 @@ h4 {
 .header {
   padding-top: 60px;
 }
+@media (max-width: 1280px) {
+  .header {
+    padding-top: 30px;
+  }
+}
+@media (max-width: 1023px) {
+  .header {
+    padding-top: 15px;
+  }
+}
 .header__inner {
   display: flex;
   justify-content: space-between;
@@ -346,29 +357,29 @@ h4 {
   margin-left: auto;
   font-size: 20px;
 }
-.header-list {
+.header__menu-list {
   display: flex;
   align-items: center;
   -moz-column-gap: 40px;
        column-gap: 40px;
 }
-.header-link {
+.header__menu-list-link {
   position: relative;
   display: inline-flex;
   align-items: center;
   height: 48px;
 }
 @media (hover: hover) {
-  .header-link:hover::after {
+  .header__menu-list-link:hover::after {
     width: 100%;
   }
 }
 @media (hover: none) {
-  .header-link:active::after {
+  .header__menu-list-link:active::after {
     width: 100%;
   }
 }
-.header-link::after {
+.header__menu-list-link::after {
   content: "";
   position: absolute;
   top: 100%;
