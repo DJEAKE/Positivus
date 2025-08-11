@@ -1,6 +1,14 @@
 .header {
     padding-top: 60px;
 
+    @include desktop {
+        padding-top: 30px;
+    }
+
+    @include mobile {
+        padding-top: 15px;
+    }
+
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -17,6 +25,7 @@
         display: flex;
         align-items: center;
         column-gap: 40px;
+
     }
 
     &-link {
